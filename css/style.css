@@ -1,0 +1,993 @@
+/* =====================================
+   RESET Y TIPOGRAFÍA
+===================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e50;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    padding: 40px 20px;
+    flex: 1; /* Hace que el contenido empuje al footer hacia abajo */
+    /* ✅ CORRECCIÓN: Fuerza a la sección a ocupar el espacio restante */
+     min-height: calc(100vh - 120px - 80px);
+}
+
+/* =====================================
+   ENCABEZADO Y PIE
+===================================== */
+header {
+    width: 100%;
+    height: 120px;
+    background: linear-gradient(90deg, #3b5998, #5a5f72);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #3b5998, #5a5f72);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 0 -4px 10px rgba(0,0,0,0.1);
+   /*margin-top: auto; Lo mantiene fijo al final sin superponerse */
+}
+
+/* =====================================
+   TITULOS
+===================================== */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #34495e;
+}
+
+h6 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+/* =====================================
+   FORMULARIOS INICIO DE SESION
+===================================== */
+.inis {
+    width: 380px;
+    margin: 25px auto;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.inis:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO ELEGANTE SIN ICONOS */
+.inis h2 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: #ffffff;
+    text-align: center;
+    margin: -15px -15px 20px -15px;  /* Ajustado al padding: 15px */
+    padding: 18px;  /* Un poco menos de padding */
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 20px 20px 0 0;
+    letter-spacing: 1.5px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+}
+
+/* ELIMINAMOS LOS PSEUDO-ELEMENTOS DEL TÍTULO */
+.inis h2:before,
+.inis h2:after {
+    display: none;
+}
+
+/* ESTILOS ESPECÍFICOS SOLO PARA EL LOGIN - SIN AFECTAR OTROS FORMULARIOS */
+.inis .form-group {
+    margin-bottom: 0.5rem;
+}
+
+.inis .form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.inis .form-group label i {
+    margin-right: 10px;
+    color: #3b5998;
+    width: 16px;
+}
+
+.inis .form-control {
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    padding: 12px 15px;
+    transition: all 0.3s;
+}
+
+.inis .form-control:focus {
+    border-color: #3b5998;
+    box-shadow: 0 0 0 0.25rem rgba(59, 89, 152, 0.25);
+}
+
+/* BOTÓN INGRESAR - Mantiene azul original */
+.inis .btn-primary {
+    background: #3b5998;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: background 0.3s, transform 0.2s;
+    padding: 12px;
+}
+
+.inis .btn-primary:hover {
+    background: #2d4373;
+    transform: translateY(-2px);
+}
+
+/* BOTÓN REGISTRO - Azul/gris elegante */
+.inis .btn-outline-primary {
+    background: transparent;
+    border: 2px solid #5d6d7e;
+    color: #5d6d7e;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: all 0.3s;
+    padding: 12px;
+}
+
+.inis .btn-outline-primary:hover {
+    background: #5d6d7e;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.inis .derr {
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    border-left: 4px solid #c0392b;
+    margin-top: 10px;
+}
+
+.inis .forgot-password {
+    text-align: center;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e3e6f0;
+}
+
+.inis .forgot-password a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.inis .forgot-password a:hover {
+    color: #3b5998;
+}
+
+.inis .social-login {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.inis .social-login p {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.inis .social-login p:before, .inis .social-login p:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 35%;
+    height: 1px;
+    background-color: #e3e6f0;
+}
+
+.inis .social-login p:before {
+    left: 0;
+}
+
+.inis .social-login p:after {
+    right: 0;
+}
+
+.inis .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* BOTÓN GMAIL - Azul/gris elegante */
+.inis .social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #34495e;
+    color: #ecf0f1;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+    border: 1px solid #4a637a;
+}
+
+.inis .social-icons a:hover {
+    background: #2c3e50;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(52, 73, 94, 0.4);
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding: 10px;
+}
+
+.register-text p {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.register-link {
+    color: #3b5998;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #2d4373;
+    text-decoration: underline;
+}
+/* =====================================
+    FORMULARIO DE REGISTRO - WIDE (FINAL)
+===================================== */
+.inis-registro {
+    /* CONTROL DE ANCHO Y CENTRADO */
+    max-width: 1200px !important; /* Mantenemos 1200px según tu solicitud */
+    width: 90% !important; 
+    margin: 25px auto !important; /* Fuerza el centrado */
+    
+    /* Diseño */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block; 
+}
+
+.inis-registro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO PRINCIPAL - Mantiene el estilo elegante */
+.inis-registro h2 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: #ffffff;
+    text-align: center;
+    margin: -15px -15px 20px -15px; 
+    padding: 18px; 
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 20px 20px 0 0;
+    letter-spacing: 1.5px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+}
+
+/* ELIMINACIÓN: Oculta el subtítulo "Paso 1 de 2" */
+.inis-registro h3 {
+    display: none; 
+}
+
+/* ESTILOS DE GRUPO DE FORMULARIO */
+.inis-registro .form-group {
+    margin-bottom: 1rem !important; 
+}
+
+.inis-registro .form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.inis-registro .form-group label i {
+    margin-right: 10px;
+    color: #3b5998;
+    width: 16px;
+}
+
+/* ESTILOS DE CONTROLES (INPUTS Y SELECTS) */
+.inis-registro .form-control {
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+}
+
+.inis-registro .form-control:focus {
+    border-color: #3b5998;
+    box-shadow: 0 0 0 0.25rem rgba(59, 89, 152, 0.25);
+}
+
+/* 🛑 ESTILO DEL BOTÓN DE REGISTRO FINAL (AZUL PRIMARIO Y GRANDE) 🛑 */
+/* Aplica al botón final de envío */
+/* 🛑 ESTILO DEL BOTÓN DE REGISTRO FINAL (AZUL PRIMARIO Y CENTRADO) 🛑 */
+/* Aplica al botón final de envío (.btn-primary-custom) */
+.inis-registro .btn-primary-custom { 
+    /* Estilos de Diseño */
+    background: #3b5998 !important; /* Color de Fondo */
+    border: none !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    transition: background 0.3s, transform 0.2s !important;
+    padding: 12px !important; 
+    
+    /* Centrado y Tamaño Específico */
+    width: 300px; /* <--- Ancho Fijo (ejemplo: 300px) */
+    display: block; /* <--- Necesario para el centrado */
+    margin: 0 auto; /* <--- CENTRADO HORIZONTAL */
+}
+
+.inis-registro .btn-primary-custom:hover {
+    background: #2d4373 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* 🛑 ESTILO DEL BOTÓN DE RECAPTCHA (SECUNDARIO, GRIS Y CENTRADO) 🛑 */
+/* 🛑 ESTILO DEL BOTÓN DE RECAPTCHA (SECUNDARIO, GRIS Y CENTRADO) 🛑 */
+.inis-registro .btn-secondary { 
+    /* Colores y tamaño */
+    background: #95a5a6 !important; /* Gris suave (Estado normal) */
+    border: 1px solid #7f8c8d !important;
+    color: #fff !important;         /* <--- ¡CORREGIDO: LETRA EN BLANCO! */
+    font-weight: 500 !important;
+    border-radius: 8px !important; 
+    transition: background 0.3s !important;
+    padding: 8px !important; 
+    
+    /* Centrado */
+    width: 250px; 
+    display: block; 
+    margin: 0 auto; 
+}
+
+.inis-registro .btn-secondary:hover {
+    background: #555555 !important; /* <--- ¡CORREGIDO: FONDO NEGRO AL HOVER! */
+    color: #fff !important;         /* Letra se mantiene en blanco */
+}
+
+/* ESTILO DEL TEXTO DE ENLACE (Ya tienes cuenta, Inicia Sesión) */
+.register-text {
+    text-align: center; /* Centra el párrafo */
+    margin-top: 1.5rem;
+    padding: 10px 0; 
+}
+
+.register-link {
+    color: #3b5998; /* Mismo color azul */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #2d4373;
+    text-decoration: underline;
+}
+
+
+/* 🛑 SOLUCIÓN DEFINITIVA A PRUEBA DE FALLOS (Para alineación horizontal) 🛑 */
+.inis-registro .row {
+    margin-left: -15px !important; 
+    margin-right: -15px !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; 
+    width: auto; 
+}
+
+/* Forzamos el ancho de las columnas */
+.inis-registro .col-md-6 {
+    flex: 0 0 50% !important; 
+    max-width: 50% !important;
+}
+
+.inis-registro .col-md-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+}
+
+.inis-registro .col-md-8 {
+    flex: 0 0 66.666666% !important;
+    max-width: 66.666666% !important;
+}
+
+/* Asegura el padding interno de las columnas */
+.inis-registro [class^="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* ESTILOS PARA MENSAJES DE ERROR */
+.inis-registro .derr {
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.2);
+    color: #c0392b;
+    padding: 12px;
+    border-radius: 10px;
+    border-left: 4px solid #c0392b;
+    margin-top: 10px;
+}
+
+/* =====================================
+    FORMULARIO DE REGISTRO - WIDE (FINAL)
+    (Usado para VRegUsu.php y VRegEmp.php)
+===================================== */
+.inis-registro {
+    /* CONTROL DE ANCHO Y CENTRADO */
+    max-width: 1200px !important; /* Mantenemos 1200px según tu solicitud */
+    width: 90% !important; 
+    margin: 25px auto !important; /* Fuerza el centrado */
+    
+    /* Diseño */
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: block; 
+}
+
+.inis-registro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* TÍTULO PRINCIPAL - Mantiene el estilo elegante */
+.inis-registro h2 {
+    background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    color: #ffffff;
+    text-align: center;
+    margin: -15px -15px 20px -15px; 
+    padding: 18px; 
+    font-weight: 500;
+    font-size: 1.3rem;
+    border-radius: 20px 20px 0 0;
+    letter-spacing: 1.5px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2);
+}
+
+/* Subtítulo visible para el paso 2 */
+/* 🚨 CORRECCIÓN: Hacemos visible el paso actual (Paso 2) pero con un estilo discreto */
+.inis-registro .step-title {
+    text-align: center;
+    color: #34495e;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+
+/* ESTILOS DE GRUPO DE FORMULARIO */
+.inis-registro .form-group {
+    margin-bottom: 1rem !important; 
+}
+
+.inis-registro .form-group label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.inis-registro .form-group label i {
+    margin-right: 10px;
+    color: #3b5998;
+    width: 16px;
+}
+
+/* ESTILOS DE CONTROLES (INPUTS Y SELECTS) */
+.inis-registro .form-control {
+    border-radius: 8px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.06);
+    /* Aseguramos que los inputs se extiendan completamente dentro de su columna */
+    width: 100%; 
+}
+
+.inis-registro .form-control:focus {
+    border-color: #3b5998;
+    box-shadow: 0 0 0 0.25rem rgba(59, 89, 152, 0.25);
+}
+
+/* 🛑 ESTILO DEL BOTÓN DE REGISTRO FINAL (AZUL PRIMARIO Y CENTRADO) 🛑 */
+.inis-registro .btn-primary-custom { 
+    /* Estilos de Diseño */
+    background: #3b5998 !important; /* Color de Fondo */
+    border: none !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    border-radius: 12px !important;
+    transition: background 0.3s, transform 0.2s !important;
+    padding: 12px !important; 
+    
+    /* Centrado y Tamaño Específico */
+    width: 300px; /* <--- Ancho Fijo (ejemplo: 300px) */
+    display: block; /* <--- Necesario para el centrado */
+    margin: 0 auto; /* <--- CENTRADO HORIZONTAL */
+}
+
+.inis-registro .btn-primary-custom:hover {
+    background: #2d4373 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ESTILO DEL TEXTO DE ENLACE (Ya tienes cuenta, Inicia Sesión) */
+.register-text {
+    text-align: center; /* Centra el párrafo */
+    margin-top: 1.5rem;
+    padding: 10px 0; 
+}
+
+.register-link {
+    color: #3b5998; /* Mismo color azul */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.register-link:hover {
+    color: #2d4373;
+    text-decoration: underline;
+}
+
+
+/* 🛑 SOLUCIÓN DEFINITIVA A PRUEBA DE FALLOS (Para alineación horizontal) 🛑 */
+/* Estas clases asumen que estás usando un framework basado en Grid (como Bootstrap) que define 'row' y 'col-md-x' */
+.inis-registro .row {
+    margin-left: -15px !important; 
+    margin-right: -15px !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; 
+    width: auto; 
+}
+
+/* Forzamos el ancho de las columnas */
+.inis-registro .col-md-6 {
+    flex: 0 0 50% !important; 
+    max-width: 50% !important;
+}
+
+.inis-registro .col-md-4 {
+    flex: 0 0 33.333333% !important;
+    max-width: 33.333333% !important;
+}
+
+.inis-registro .col-md-8 {
+    flex: 0 0 66.666666% !important;
+    max-width: 66.666666% !important;
+}
+
+/* Asegura el padding interno de las columnas */
+.inis-registro [class^="col-"] {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+/* ESTILOS PARA MENSAJES DE ERROR */
+.inis-registro .derr {
+    text-align: center;
+    /* Usamos los colores originales de tu error de la vista anterior */
+    background-color: #f8d7da !important; 
+    color: #721c24 !important; /* Rojo oscuro para que se vea */
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #f5c6cb;
+    margin-top: 10px;
+    font-weight: 600;
+}
+/* =====================================
+   PERFIL
+===================================== */
+/* ==========================================================
+    ESTILOS PARA LA INFORMACIÓN DE USUARIO Y CERRAR SESIÓN EN EL NAVBAR INFERIOR
+========================================================== */
+
+/* ----------------------------------------------------------
+    1. CONTENEDOR DE ÍTEMS INFERIORES (SOLUCIÓN LÍNEA SEPARADORA)
+    Aplica una ÚNICA línea separadora visible sobre la sección de perfil/logout.
+---------------------------------------------------------- */
+.navbar-bottom-items {
+    /* Establece la única línea separadora visible entre el menú de navegación y la sección de usuario */
+    border-top: 1px solid rgba(255, 255, 255, 0.2); 
+    padding-top: 5px; /* Espaciado sobre la línea */
+    padding-bottom: 5px; /* Espaciado bajo la línea */
+}
+
+
+/* ----------------------------------------------------------
+    2. CONTENEDOR DE INFORMACIÓN DE USUARIO (NO CLICKEABLE)
+---------------------------------------------------------- */
+
+.user-info-display {
+    /* Eliminamos la propiedad 'border-top' que estaba aquí y causaba la doble línea */
+    padding: 10px 0;
+    cursor: default; 
+    opacity: 0.9;
+}
+
+/* Espacio entre el ícono de Usuario (fa-user-tie) y el texto */
+.user-info-display .navbar-item-inner-icon-wrapper {
+    margin-right: 10px; 
+}
+
+
+/* ----------------------------------------------------------
+    3. ÍTEM CERRAR SESIÓN
+---------------------------------------------------------- */
+
+/* Espacio entre el ícono de Salir (fa-power-off) y el texto "Cerrar Sesión" */
+.navbar-bottom-items li:last-child .navbar-item-inner-icon-wrapper {
+    margin-right: 10px; 
+}
+
+
+/* ----------------------------------------------------------
+    4. COLORES DE ÍCONOS UNIFORMES (BLANCO) Y TAMAÑO ESTÁNDAR
+    Se eliminan los font-size específicos para que tomen el tamaño de los otros ítems.
+---------------------------------------------------------- */
+
+/* Ícono de Usuario (fa-user-tie) - Color blanco */
+.user-info-display .navbar-item-inner-icon-wrapper i {
+    /* Se elimina font-size: 22px; para usar el tamaño por defecto del menú */
+    color: #fff !important; 
+}
+
+/* Ícono de Cerrar Sesión (fa-power-off) - Color blanco */
+.navbar-bottom-items li:last-child a i {
+    /* Se elimina font-size: 20px; para usar el tamaño por defecto del menú */
+    color: #fff !important; 
+    transition: color 0.2s;
+}
+
+/* Hover de Cerrar Sesión (Color Rojo) */
+.navbar-bottom-items li:last-child a:hover i {
+    color: #e60000; 
+}
+
+
+/* ----------------------------------------------------------
+    5. ESTILOS DE TEXTO DEL PERFIL (Edward Salinas / Admin/empresa)
+---------------------------------------------------------- */
+
+/* Contenedor de texto para forzar el apilamiento en dos líneas */
+.profile-text {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start;
+    line-height: 1.1; 
+    color: #ecf0f1; 
+    font-size: 14px;
+    font-weight: bold; 
+}
+
+/* Estilo específico para el Nombre */
+.profile-name {
+    font-weight: bold;
+    font-size: 14px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilo específico para el Rol/Perfil */
+.profile-role {
+    font-weight: normal;
+    font-size: 12px; 
+    color: #bdc3c7; 
+}
+
+/* Regla para ocultar el texto en modo colapsado (si aplica en tu diseño) */
+.collapsed .profile-text {
+    display: none; 
+}
+
+
+
+/* =====================================
+   BOTONES, LINKS Y ELEMENTOS INTERACTIVOS
+===================================== */
+.btn-primary {
+    background-color: #3b5998;
+    border: none;
+    border-radius: 10px;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #2d4373;
+}
+
+.btn-outline-success {
+    border-radius: 10px;
+}
+
+/* =====================================
+   TARJETAS DASHBOARD
+===================================== */
+.card-dashboard {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-dashboard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.card-dashboard h5 {
+    color: #34495e;
+    font-weight: bold;
+}
+
+.card-dashboard p {
+    color: #7f8c8d;
+}
+
+/* =====================================
+   SIDEBAR
+===================================== /
+.sidebar {
+    background: #2c3e50;
+    color: #ecf0f1;
+}
+
+.sidebar h3 {
+    color: #ecf0f1;
+}
+
+.sidebar .nav-link {
+    color: #bdc3c7;
+    border-radius: 8px;
+}
+
+.sidebar .nav-link.active,
+.sidebar .nav-link:hover {
+    background: #34495e;
+    color: #fff;
+}
+*/
+
+
+/*----------------- RESPONSIVE-----------------*/
+/* =====================================
+   RESPONSIVE GLOBAL (para todas las vistas)
+===================================== */
+
+/* Asegura que el contenido no se desborde del ancho */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ajusta los contenedores principales */
+.row {
+    margin: 0;
+}
+
+/* Formularios */
+form .form-group {
+    width: 100%;
+}
+
+/* Inputs, selects y botones a ancho completo en pantallas pequeñas */
+@media (max-width: 768px) {
+    /* Mantenemos tus reglas responsivas globales */
+    .form-group {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    input.form-control,
+    select.form-control,
+    textarea.form-control {
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    /* Aseguramos que el botón global sea 100% de ancho */
+    .btn {
+        width: 100%; 
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+
+    /* Ajuste para títulos */
+    h2 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Hace que formularios y tablas se apilen verticalmente (TU REGLA GLOBAL) */
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    form {
+        padding: 15px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    table {
+        margin-top: 15px;
+    }
+
+    /* 🛑 EXCEPCIÓN CRÍTICA PARA EL FORMULARIO DE REGISTRO (.inis-registro) 🛑 */
+
+    /* 1. Oculta el subtítulo "Paso 1 de 2: Datos Personales" */
+    .inis-registro h3 {
+        display: none !important; 
+    }
+
+    /* 2. Anula la regla global de apilamiento (.row) y fuerza la dirección horizontal para el registro */
+    .inis-registro .row {
+        flex-direction: row !important; /* ¡Esto arregla el apilamiento! */
+        flex-wrap: wrap !important;
+    }
+
+    /* 3. Forzamos el ancho de las columnas a sus valores originales para el registro (col-md-6 = 50% en móvil) */
+    .inis-registro .col-md-6 {
+        flex: 0 0 50% !important; 
+        max-width: 50% !important;
+    }
+
+    .inis-registro .col-md-4 {
+        flex: 0 0 33.333333% !important;
+        max-width: 33.333333% !important;
+    }
+
+    .inis-registro .col-md-8 {
+        flex: 0 0 66.666666% !important;
+        max-width: 66.666666% !important;
+    }
+
+    /* 4. Aseguramos que el contenedor de registro mantenga su ancho centrado */
+    .inis-registro {
+        max-width: 700px !important; 
+        width: 90% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    
+    /* 5. Estilo para el texto de "¿Ya tienes cuenta? Inicia Sesión" (Centrado y visible) */
+    /* **NOTA:** Asumo que el HTML usa la clase 'register-text' para el contenedor del enlace. */
+    .inis-registro .register-text {
+        text-align: center !important; 
+        margin-top: 1.5rem !important;
+    }
+    
+    .inis-registro .register-text a {
+        color: #3b5998 !important; /* Mismo color azul de Iniciar Sesión */
+        font-weight: bold !important;
+        text-decoration: none !important;
+    }
+    
+    .inis-registro .register-text a:hover {
+        text-decoration: underline !important;
+    }
+}
+
+/* =====================================
+   TABLAS RESPONSIVAS
+===================================== */
+
+/* Contenedor con scroll horizontal */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 10px;
+}
+
+/* Asegura que las tablas mantengan estilo Bootstrap */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 900px; /* evita que se comprima demasiado */
+    font-size: 0.95rem;
+}
+
+/* Celdas legibles y adaptables */
+.table td, .table th {
+    white-space: normal !important;
+    word-wrap: break-word;
+    vertical-align: middle;
+    text-align: left;
+    padding: 10px 8px;
+}
+
+/* Encabezado con fondo suave */
+.table thead th {
+    background-color: #f5f6f8;
+    font-weight: 600;
+}
+
+/* Espaciado entre botones de acciones */
+.table td a.btn {
+    margin: 2px;
+}
+
+/* Reduce fuente en pantallas pequeñas */
+@media (max-width: 480px) {
+    .table td, .table th {
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+
+    .table {
+        min-width: 600px; /* más adaptable a pantallas pequeñas */
+    }
+}
+
+/* Para evitar conflictos con DataTables */
+.dataTables_wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Mejora scroll horizontal en dispositivos táctiles */
+@supports (-webkit-touch-callout: none) {
+    .table-responsive {
+        -webkit-overflow-scrolling: touch;
+    }
+}
